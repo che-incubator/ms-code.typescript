@@ -1,2 +1,3 @@
-# ms-code.typescript
-ms-code.typescript
+# Che typescript language plugin
+
+Che typescript language plugin
