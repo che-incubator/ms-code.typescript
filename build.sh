@@ -12,6 +12,9 @@
 set -e
 set -u
 
+VSCODE_VERSION=1.35.1
+PLUGIN="che-typescript-language-$VSCODE_VERSION.vsix"
+
 cd docker
 docker build -t che-incubator/che-typescript-language .
 
@@ -25,8 +28,8 @@ docker run --rm che-incubator/che-typescript-language | tar -xf - -C target/exte
 
 cd target
 cp ../etc/* .
-zip -r che-typescript-language.vsix *
+zip -r $PLUGIN *
 pwd
-mv ./che-typescript-language.vsix ../out/che-typescript-language.vsix
+mv ./$PLUGIN ../out/$PLUGIN
 
-echo "Successufully build: out/che-typescript-language.vsix"
+echo "Successufully build: out/$PLUGIN"
