@@ -11,3 +11,16 @@ index eb50009cfd..c3877beb06 100644
  			const bundledVersion = new TypeScriptVersion(typescriptPath, '');
  			if (bundledVersion.isValid) {
  				return bundledVersion;
+diff --git a/extensions/typescript-language-features/package.json b/extensions/typescript-language-features/package.json
+index a5147d60f8..8639051b21 100644
+--- a/extensions/typescript-language-features/package.json
++++ b/extensions/typescript-language-features/package.json
+@@ -2,7 +2,7 @@
+   "name": "typescript-language-features",
+   "description": "%description%",
+   "displayName": "%displayName%",
+-  "version": "1.0.0",
++  "version": "1.35.1",
+   "icon": "icon.png",
+   "author": "vscode",
+   "publisher": "vscode",
