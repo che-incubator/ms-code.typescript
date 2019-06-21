@@ -24,3 +24,16 @@ index a5147d60f8..8639051b21 100644
    "icon": "icon.png",
    "author": "vscode",
    "publisher": "vscode",
+diff --git a/extensions/typescript-language-features/src/utils/logDirectoryProvider.ts b/extensions/typescript-language-features/src/utils/logDirectoryProvider.ts
+index af6886e704..c0b924c56b 100644
+--- a/extensions/typescript-language-features/src/utils/logDirectoryProvider.ts
++++ b/extensions/typescript-language-features/src/utils/logDirectoryProvider.ts
+@@ -30,7 +30,7 @@ export default class LogDirectoryProvider {
+ 		try {
+ 			const path = this.context.logPath;
+ 			if (!fs.existsSync(path)) {
+-				fs.mkdirSync(path);
++				fs.mkdirSync(path, {recursive: true});
+ 			}
+ 			return this.context.logPath;
+ 		} catch {
